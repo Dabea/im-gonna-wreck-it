@@ -1,0 +1,27 @@
+body{
+    background: aquamarine
+}
+
+.smash-card {
+    background: #444444;
+}
+
+.smash-image {
+    height:100px;
+    width:120px;
+   
+    
+}
+
+.smash-header {
+    color: aliceblue;
+    text-align: center
+}
+
+.smash-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: minmax(150px , auto);
+    grid-gap: 1em;
+
+}
