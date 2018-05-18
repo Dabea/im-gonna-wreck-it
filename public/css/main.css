@@ -9,8 +9,6 @@ body{
 .smash-image {
     height:100px;
     width:120px;
-   
-    
 }
 
 .smash-header {
@@ -20,8 +18,17 @@ body{
 
 .smash-grid{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr ;
     grid-template-rows: minmax(150px , auto);
     grid-gap: 1em;
 
+}
+
+.split-grid {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+}
+
+.masthead-title{
+    text-align: center;
 }
