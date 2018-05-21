@@ -2,20 +2,24 @@
     <div class="smashable smash-grid">
         <h2 class="center-item" >Gonna Wreck</h2>
     {{#each smashable}}
-    <div class="smash-card">
-       <h3 class="smash-header">{{name}}</h3>
-        <img class="smash-image" src="{{photo}}" alt="smashabe item" >
-    </div>
+        {{#unless is_smashed}}
+        <div class="smash-card">
+        <h3 class="smash-header">{{item_name}}</h3>
+            <img class="smash-image" src="{{photo}}" alt="smashabe item" >
+            <button class="wreck-it smash-button"> Wreck It</button>
+        </div>
+        {{/unless}}
     {{/each}}
     </div>
-
      <div class="smashable smash-grid">
          <h2 class="center-item">Still Need to Wreck</h2>
-    {{#each wrecked}}
-    <div class="smash-card">
-       <h3 class="smash-header">{{name}}</h3>
-        <img class="smash-image" src="{{photo}}" alt="smashabe item" >
-    </div>
+    {{#each smashable}}
+        {{#if is_smashed}}
+        <div class="smash-card">
+        <h3 class="smash-header">{{item_name}}</h3>
+            <img class="smash-image" src="{{photo}}" alt="smashabe item" >
+        </div>
+        {{/if}}
     {{/each}}
     </div>
 

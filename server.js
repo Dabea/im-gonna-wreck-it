@@ -1,5 +1,6 @@
 var express = require('express');
 var exphbs  = require('express-handlebars');
+const orm = require('./config/orm');
  
 var app = express();
  
@@ -30,7 +31,13 @@ const wrecked = [
     }
     ]
 app.get('/', function (req, res) {
-    res.render('index', {smashable: smashable, wrecked: wrecked});
+    orm.selectAll((data) => res.render('index', {smashable: data}) )
+    
+});
+
+app.get('/api/new/:id', function (req, res) {
+
+   orm.insertOne()
 });
  
 app.listen(3000);

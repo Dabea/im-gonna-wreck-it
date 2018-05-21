@@ -1,5 +1,6 @@
 body{
-    background: aquamarine
+    background: url('http://cdn.collider.com/wp-content/uploads/wreck-it-ralph-concept-art-7.jpg') no-repeat;
+    background-size:cover;
 }
 
 .smash-card {
@@ -19,16 +20,32 @@ body{
 .smash-grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
-    grid-template-rows: minmax(150px , auto);
+    grid-template-rows: min-content;
     grid-gap: 1em;
-
+    background: rgba(4, 4, 4, 0.6);
+    padding:10px;
 }
 
 .split-grid {
     display: grid;
+    grid-gap:1em;
     grid-template-columns:1fr 1fr;
+
 }
 
 .masthead-title{
+    grid-auto-columns: 3fr;
     text-align: center;
+}
+
+.smash-button {
+    width:100%;
+}
+
+.center-item {
+    grid-column: 1/4;
+    text-align: center;
+    grid-row: 25px;;
+    color:white;
+   
 }

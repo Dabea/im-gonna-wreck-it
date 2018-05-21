@@ -10,7 +10,7 @@ const orm = {
         })
     },
     insertOne: function(value){
-        connection.query("INSERT INTO smash (item_name) VALUE (?)", value , function(err, results){
+        connection.query("INSERT INTO smash (item_name, photo ) VALUE (?,?)", value , function(err, results){
             if(err) throw err;
             console.log("db has been updated");
         })
@@ -23,5 +23,7 @@ const orm = {
         })
     }
 }
- 
+
+const test = ["Birthday","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSj63s96cr-d-LOTD12qs6FpaMmnH7y2a9gukrxXmDtB_aDNGI"]
+orm.insertOne(test);
 module.exports = orm;
