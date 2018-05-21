@@ -1,9 +1,10 @@
 var express = require('express');
 var exphbs  = require('express-handlebars');
 const orm = require('./config/orm');
- 
+var bodyParser = require('body-parser') 
 var app = express();
  
+app.use(bodyParser.urlencoded({ extended: false }));
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
@@ -20,24 +21,18 @@ const smashable = [
 }
 ]
 
-const wrecked = [
-    {
-        name: "Chochlate",
-        photo: "https://i2.wp.com/www.2hungryguys.com.au/wp-content/uploads/2015/10/DSC03714.jpg?w=900&ssl=1"
-    },
-    {
-        name: "Birthday",
-        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSj63s96cr-d-LOTD12qs6FpaMmnH7y2a9gukrxXmDtB_aDNGI"
-    }
-    ]
 app.get('/', function (req, res) {
     orm.selectAll((data) => res.render('index', {smashable: data}) )
     
 });
 
-app.get('/api/new/:id', function (req, res) {
-
-   orm.insertOne()
+app.post('/api/new/', function (req, res) {
+   orm.insertOne([req.body.name, req.body.photo])
 });
+
+app.put('/api/:id', function (req,res){
+    orm.updateOne(req.params.id);
+    console.log("updated");
+})
  
 app.listen(3000);

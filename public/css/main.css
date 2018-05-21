@@ -49,3 +49,10 @@ body{
     color:white;
    
 }
+
+.smash-input-grid {
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

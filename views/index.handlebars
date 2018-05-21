@@ -1,15 +1,17 @@
 <div class="split-grid">
-    <div>
-        <input type="text" placeholder="">
+    <div class="smash-input-grid">
+       <label>Name</label> <input class="name-input" type="text" placeholder="">
+        <label>Photo</label>    <input class="photo-input" type="text" placeholder="">
+        <button class="add-item">Add New Item</button>
     </div>
     <div class="smashable smash-grid">
         <h2 class="center-item" >Gonna Wreck</h2>
     {{#each smashable}}
         {{#unless is_smashed}}
-        <div class="smash-card">
+        <div id="{{id}}"  class="smash-card">
         <h3 class="smash-header">{{item_name}}</h3>
             <img class="smash-image" src="{{photo}}" alt="smashabe item" >
-            <button class="wreck-it smash-button"> Wreck It</button>
+            <button data-id="{{id}}" class="wreck-it smash-button" > Wreck It</button>
         </div>
         {{/unless}}
     {{/each}}
