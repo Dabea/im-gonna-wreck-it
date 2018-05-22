@@ -10,10 +10,12 @@
         {{#unless is_smashed}}
         <div id="{{id}}"  class="smash-card">
         <h3 class="smash-header">{{item_name}}</h3>
-            <img class="smash-image" src="{{photo}}" alt="smashabe item" >
+            <div class="ralph-smash" id="ralph-{{id}}></div>
+            <img class="smash-image" src="{{photo}}" onerror="this.onerror=null;this.src=' https://www.bakingo.com/sites/default/files/styles/product_image/public/heart-shaped-choco-vanilla-cake-A.jpg?itok=PMOKV9N5';" alt="smashabe item" >
             <button data-id="{{id}}" class="wreck-it smash-button" > Wreck It</button>
         </div>
         {{/unless}}
+       
     {{/each}}
     </div>
      <div class="smashable smash-grid">
@@ -22,7 +24,7 @@
         {{#if is_smashed}}
         <div class="smash-card">
         <h3 class="smash-header">{{item_name}}</h3>
-            <img class="smash-image" src="{{photo}}" alt="smashabe item" >
+             <img class="smash-image" src="{{photo}}" onerror="this.onerror=null;this.src=' https://www.bakingo.com/sites/default/files/styles/product_image/public/heart-shaped-choco-vanilla-cake-A.jpg?itok=PMOKV9N5';" alt="smashabe item" >
         </div>
         {{/if}}
     {{/each}}

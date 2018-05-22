@@ -56,3 +56,54 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+
+/* Sprites */
+.ralph-smash{
+    background: url('/ralphSprite.png') -359px -95px;
+    width: 70px;
+    height:60px;
+}
+/* Second Row Base  X shift 71px, Y Start -95 height */
+.ralph-smash-1{
+    background: url('/ralphSprite.png') -1px -95px;
+    width: 70px;
+    height:55px;
+}
+
+.ralph-smash-2{
+    background: url('/ralphSprite.png') -75px -95px;
+    width: 70px;
+    height:60px;
+}
+
+.ralph-smash-3{
+    background: url('/ralphSprite.png') -149px -95px;
+    width: 70px;
+    height:60px;
+}
+
+.ralph-smash-4{
+    background: url('/ralphSprite.png') -217px -95px;
+    width: 70px;
+    height:60px;
+}
+
+.ralph-smash-5{
+    background: url('/ralphSprite.png') -288px -95px;
+    width: 70px;
+    height:60px;
+}
+
+.ralph-smash-6{
+    background: url('/ralphSprite.png') -359px -95px;
+    width: 70px;
+    height:60px;
+}
+
+/* First Row Base */
+.ralph-smash-stand{
+    background: url('/ralphSprite.png') -10px -26px;;
+    height:55px;
+    width: 46px;
+}
